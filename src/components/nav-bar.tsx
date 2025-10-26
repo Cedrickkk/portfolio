@@ -1,8 +1,8 @@
 import { Dock, DockIcon } from "@/components/ui/dock";
-import { externalNavItems, homeNavItems } from "@/data/icons";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { Separator } from "@/components/ui/separator";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { externalLinks, navigation } from "@/data/navigation";
 
 export default function NavBar() {
   return (
@@ -13,7 +13,7 @@ export default function NavBar() {
           direction="middle"
           className="bg-background pointer-events-auto relative z-10 flex h-14 items-center gap-1 rounded-2xl border px-1 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] dark:[border:1px_solid_rgba(255,255,255,.1)]"
         >
-          {homeNavItems.map((item) => {
+          {navigation.map((item) => {
             const Icon = item.icon;
             return (
               <DockIcon key={item.name}>
@@ -21,8 +21,6 @@ export default function NavBar() {
                   <TooltipTrigger asChild>
                     <a
                       href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="flex items-center justify-center"
                       aria-label={item.name}
                     >
@@ -37,7 +35,7 @@ export default function NavBar() {
             );
           })}
           <Separator orientation="vertical" className="h-full py-2" />
-          {externalNavItems.map((item) => {
+          {externalLinks.map((item) => {
             const Icon = item.icon;
             return (
               <DockIcon key={item.name}>
@@ -62,7 +60,7 @@ export default function NavBar() {
           })}
           <Separator orientation="vertical" className="h-full py-2" />
           <DockIcon>
-            <AnimatedThemeToggler className="size-4 shrink-0 -translate-x-px stroke-2" />
+            <AnimatedThemeToggler className="size-4 shrink-0 -translate-x-px cursor-pointer stroke-2" />
           </DockIcon>
         </Dock>
       </div>

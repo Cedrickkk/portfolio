@@ -26,7 +26,7 @@ export default function App() {
           <div className="flex justify-between gap-2">
             <div className="flex flex-1 flex-col space-y-1.5">
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <h1 className="text-2xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                   Hi, I'm Cedrick
                 </h1>
               </BlurFade>
@@ -62,7 +62,9 @@ export default function App() {
       </section>
       <section id="about" className="space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold tracking-tight">About</h2>
+          <h2 className="text-base font-bold tracking-tight md:text-lg">
+            About
+          </h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <div className="text-muted-foreground max-w-full space-y-2 font-sans text-sm text-pretty">
@@ -84,7 +86,9 @@ export default function App() {
       </section>
       <section id="education" className="space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <h2 className="text-xl font-bold tracking-tight">Education</h2>
+          <h2 className="text-base font-bold tracking-tight md:text-lg">
+            Education
+          </h2>
         </BlurFade>
         <div className="flex min-h-0 flex-col gap-y-3">
           {education.map((item, idx) => {
@@ -122,7 +126,9 @@ export default function App() {
       </section>
       <section id="skills" className="space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 7}>
-          <h2 className="text-xl font-bold tracking-tight">Technology Stack</h2>
+          <h2 className="text-base font-bold tracking-tight md:text-lg">
+            Technology Stack
+          </h2>
         </BlurFade>
         <div className="flex min-h-0 flex-col gap-y-3">
           <div className="flex flex-col gap-1 space-y-3">
@@ -151,7 +157,9 @@ export default function App() {
       </section>
       <section id="projects" className="space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 10}>
-          <h2 className="text-xl font-bold tracking-tight">Projects</h2>
+          <h2 className="text-sm font-bold tracking-tight md:text-xl">
+            Projects
+          </h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <p className="text-muted-foreground text-sm leading-relaxed">
@@ -223,7 +231,9 @@ export default function App() {
       </section>
       <section id="currently" className="space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
-          <h2 className="text-xl font-bold tracking-tight">Currently</h2>
+          <h2 className="text-base font-bold tracking-tight md:text-xl">
+            Currently
+          </h2>
         </BlurFade>
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
@@ -288,7 +298,9 @@ export default function App() {
       <section id="contact" className="pb-12">
         <div className="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
-            <h2 className="text-xl font-bold tracking-tighter">Get in Touch</h2>
+            <h2 className="text-base font-bold tracking-tighter md:text-xl">
+              Get in Touch
+            </h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 18}>
             <p className="text-muted-foreground mx-auto max-w-[600px] text-sm">

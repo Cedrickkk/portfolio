@@ -127,7 +127,7 @@ export default function App() {
       <section id="skills" className="space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 7}>
           <h2 className="text-base font-bold tracking-tight md:text-lg">
-            Technology Stack
+            Tech Stack
           </h2>
         </BlurFade>
         <div className="flex min-h-0 flex-col gap-y-3">
@@ -157,7 +157,7 @@ export default function App() {
       </section>
       <section id="projects" className="space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 10}>
-          <h2 className="text-sm font-bold tracking-tight md:text-xl">
+          <h2 className="text-base font-bold tracking-tight md:text-lg">
             Projects
           </h2>
         </BlurFade>
@@ -231,7 +231,7 @@ export default function App() {
       </section>
       <section id="currently" className="space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
-          <h2 className="text-base font-bold tracking-tight md:text-xl">
+          <h2 className="text-base font-bold tracking-tight md:text-lg">
             Currently
           </h2>
         </BlurFade>
@@ -298,7 +298,7 @@ export default function App() {
       <section id="contact" className="pb-12">
         <div className="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
-            <h2 className="text-base font-bold tracking-tighter md:text-xl">
+            <h2 className="text-base font-bold tracking-tight md:text-lg">
               Get in Touch
             </h2>
           </BlurFade>

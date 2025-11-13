@@ -42,7 +42,7 @@ export const books: Book[] = [
     author: "Laurentiu Spilca",
     description:
       "After on data persistence, security is next on my list. I want to learn how to properly secure Spring applications and implement authentication and authorization. I picked this book to help me understand how to protect user data and build secure applications.",
-    link: "https://github.com/Cedrickkk/java-persistence-with-spring-data-and-hibernate",
+    link: "https://github.com/Cedrickkk/spring-security-in-action",
   },
   {
     id: 5,

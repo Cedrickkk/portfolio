@@ -78,8 +78,8 @@ export default function App() {
               working towards my bachelor's degree in Information Technology.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I'm currently working with Java & Spring Boot and looking forward
-              to expanding my skill set by diving into C# and .NET framework.
+              I'm currently learning and specializing in Java and Spring Boot
+              development.
             </p>
           </div>
         </BlurFade>

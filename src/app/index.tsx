@@ -70,8 +70,7 @@ export default function App() {
           <div className="text-muted-foreground max-w-full space-y-2 font-sans text-sm text-pretty">
             <p className="text-muted-foreground leading-relaxed">
               An IT student from the Philippines focused on web development,
-              working on both frontend and backend skills to become a Full-Stack
-              Developer.
+              working on both frontend and backend technologies.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Currently in my senior year at Pamantasan ng Lungsod ng Pasig,

@@ -20,7 +20,7 @@ export const navigation: NavItem[] = [
 
   {
     name: "Resume",
-    url: "resume-johncedricpanti.pdf",
+    url: "/resume.pdf",
     icon: FileText,
   },
 ];

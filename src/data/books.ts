@@ -51,6 +51,6 @@ export const books: Book[] = [
     author: "Mark Heckler",
     description:
       "Once I've covered the fundamentals of Spring, persistence, and security, I plan to dive deeper into Spring Boot. This book will show me how to tie everything together and build production-ready applications. I'm looking forward to learning cloud-native development practices and making the most of Spring Boot's features.",
-    link: "https://github.com/Cedrickkk/java-persistence-with-spring-data-and-hibernate",
+    link: "https://github.com/Cedrickkk/springboot-up-and-running",
   },
 ];

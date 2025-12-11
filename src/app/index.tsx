@@ -201,14 +201,6 @@ export default function App() {
                       })}
                     </div>
                   </CardContent>
-                  <CardFooter>
-                    <Badge className="mt-2 text-xs" asChild>
-                      <a href="" target="_blank" rel="noopener noreferrer">
-                        <GrGithub />
-                        Github
-                      </a>
-                    </Badge>
-                  </CardFooter>
                 </Card>
               </BlurFade>
             );

@@ -68,7 +68,7 @@ export const certificates: CertificateItem[] = [
     issuer: "@awseducate",
     content: {
       id: 7,
-      name: "Introduction to Cloud 101",
+      name: "Introduction to Cloud Computing 101",
       imageSource: "aws-educate-introduction-to-cloud-101-training-badge.png",
     },
   },

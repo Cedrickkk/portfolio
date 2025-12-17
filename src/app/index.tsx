@@ -92,7 +92,7 @@ export default function App() {
         <div className="flex min-h-0 flex-col gap-y-3">
           {education.map((item, idx) => {
             return (
-              <BlurFade delay={BLUR_FADE_DELAY * 6 + idx * 0.05}>
+              <BlurFade delay={BLUR_FADE_DELAY * 6 + idx * 0.05} key={idx}>
                 <Card className="flex flex-row gap-0 border-none p-0 shadow-none dark:bg-transparent">
                   <div className="flex-none">
                     <Avatar className="bg-muted-background m-auto size-12 border">
@@ -131,9 +131,9 @@ export default function App() {
         </BlurFade>
         <div className="flex min-h-0 flex-col gap-y-3">
           <div className="flex flex-col gap-1 space-y-3">
-            {technologyStack.map((stack) => {
+            {technologyStack.map((stack, idx) => {
               return (
-                <div className="space-y-3">
+                <div className="space-y-3" key={idx}>
                   <BlurFade delay={BLUR_FADE_DELAY * 8}>
                     <h3 className="inline-flex items-center justify-center text-xs leading-none font-semibold sm:text-sm">
                       {stack.type}
@@ -142,7 +142,10 @@ export default function App() {
                   <div className="flex flex-wrap gap-1">
                     {stack.technologies.map((tech, idx) => {
                       return (
-                        <BlurFade delay={BLUR_FADE_DELAY * 9 + idx * 0.05}>
+                        <BlurFade
+                          delay={BLUR_FADE_DELAY * 9 + idx * 0.05}
+                          key={idx}
+                        >
                           <Badge>{tech}</Badge>
                         </BlurFade>
                       );
@@ -194,7 +197,11 @@ export default function App() {
                     <div className="flex flex-wrap gap-1 pt-2">
                       {project.technologies.map((technology) => {
                         return (
-                          <Badge variant="secondary" className="text-xs">
+                          <Badge
+                            variant="secondary"
+                            className="text-xs"
+                            key={technology}
+                          >
                             {technology}
                           </Badge>
                         );
@@ -302,8 +309,11 @@ export default function App() {
           <Marquee pauseOnHover className="[--duration:20s]">
             {certificates.map((certificate, idx) => {
               return (
-                <BlurFade delay={BLUR_FADE_DELAY * 20 + idx * 0.05}>
-                  <Dialog key={certificate.id}>
+                <BlurFade
+                  delay={BLUR_FADE_DELAY * 20 + idx * 0.05}
+                  key={certificate.id}
+                >
+                  <Dialog>
                     <DialogTrigger asChild>
                       <div className="cursor-pointer">
                         <CertificateCard

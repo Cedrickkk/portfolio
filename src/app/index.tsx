@@ -286,50 +286,55 @@ export default function App() {
         </div>
       </section>
       <section id="certificates" className="space-y-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 10}>
+        <BlurFade delay={BLUR_FADE_DELAY * 17}>
           <h2 className="text-base font-bold tracking-tight md:text-lg">
             Certificates
           </h2>
         </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+        <BlurFade delay={BLUR_FADE_DELAY * 18}>
           <p className="text-muted-foreground text-sm leading-relaxed">
             Here are some of the certificates I have earned throughout my
             college journey.
           </p>
         </BlurFade>
-        <Marquee reverse pauseOnHover className="[--duration:20s]">
-          {certificates.map((certificate) => {
-            return (
-              <Dialog key={certificate.id}>
-                <DialogTrigger asChild>
-                  <div className="cursor-pointer">
-                    <CertificateCard
-                      imageSource={certificate.content.imageSource}
-                      title={certificate.content.name}
-                      issuer={certificate.issuer}
-                    />
-                  </div>
-                </DialogTrigger>
-                <DialogContent className="max-w-4xl p-4 [&>button]:hidden">
-                  <img
-                    src={certificate.content.imageSource}
-                    alt={certificate.content.name}
-                    className="h-full w-full object-contain"
-                  />
-                </DialogContent>
-              </Dialog>
-            );
-          })}
-        </Marquee>
+        <BlurFade delay={BLUR_FADE_DELAY * 19}>
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {certificates.map((certificate, idx) => {
+              return (
+                <BlurFade delay={BLUR_FADE_DELAY * 20 + idx * 0.05}>
+                  <Dialog key={certificate.id}>
+                    <DialogTrigger asChild>
+                      <div className="cursor-pointer">
+                        <CertificateCard
+                          imageSource={certificate.content.imageSource}
+                          title={certificate.content.name}
+                          issuer={certificate.issuer}
+                        />
+                      </div>
+                    </DialogTrigger>
+
+                    <DialogContent className="max-w-4xl p-4 [&>button]:hidden">
+                      <img
+                        src={certificate.content.imageSource}
+                        alt={certificate.content.name}
+                        className="h-full w-full object-contain"
+                      />
+                    </DialogContent>
+                  </Dialog>
+                </BlurFade>
+              );
+            })}
+          </Marquee>
+        </BlurFade>
       </section>
       <section id="contact" className="pb-12">
         <div className="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 17}>
+          <BlurFade delay={BLUR_FADE_DELAY * 21}>
             <h2 className="text-base font-bold tracking-tight md:text-lg">
               Get in Touch
             </h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 18}>
+          <BlurFade delay={BLUR_FADE_DELAY * 22}>
             <p className="text-muted-foreground mx-auto max-w-[600px] text-sm">
               I'm currently on the lookout for a chance to learn and grow
               through an internship or job. I’d love to hear from you!

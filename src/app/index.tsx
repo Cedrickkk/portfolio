@@ -14,6 +14,7 @@ import { Marquee } from "@/components/ui/marquee";
 import { certificates } from "@/data/certificates";
 import CertificateCard from "@/components/certificate-card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { DialogTitle } from "@radix-ui/react-dialog";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -312,8 +313,10 @@ export default function App() {
                         />
                       </div>
                     </DialogTrigger>
-
-                    <DialogContent className="max-w-4xl p-4 [&>button]:hidden">
+                    <DialogContent className="max-w-[calc(100vw-2rem)] p-4 sm:max-w-4xl [&>button]:hidden">
+                      <DialogTitle className="sr-only">
+                        {certificate.content.name}
+                      </DialogTitle>
                       <img
                         src={certificate.content.imageSource}
                         alt={certificate.content.name}

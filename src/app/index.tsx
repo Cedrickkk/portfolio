@@ -14,7 +14,7 @@ import { Marquee } from "@/components/ui/marquee";
 import { certificates } from "@/data/certificates";
 import CertificateCard from "@/components/certificate-card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { DialogTitle } from "@radix-ui/react-dialog";
+import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -317,6 +317,9 @@ export default function App() {
                       <DialogTitle className="sr-only">
                         {certificate.content.name}
                       </DialogTitle>
+                      <DialogDescription className="sr-only">
+                        Certificate issued by {certificate.issuer}
+                      </DialogDescription>
                       <img
                         src={certificate.content.imageSource}
                         alt={certificate.content.name}

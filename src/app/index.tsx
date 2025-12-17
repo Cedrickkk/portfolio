@@ -10,6 +10,10 @@ import { education } from "@/data/education";
 import { projects } from "@/data/projects";
 import { technologyStack } from "@/data/tech-stack";
 import { GrGithub } from "react-icons/gr";
+import { Marquee } from "@/components/ui/marquee";
+import { certificates } from "@/data/certificates";
+import CertificateCard from "@/components/certificate-card";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -280,6 +284,43 @@ export default function App() {
             </BlurFade>
           </div>
         </div>
+      </section>
+      <section id="certificates" className="space-y-6">
+        <BlurFade delay={BLUR_FADE_DELAY * 10}>
+          <h2 className="text-base font-bold tracking-tight md:text-lg">
+            Certificates
+          </h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            Here are some of the certificates I have earned throughout my
+            college journey.
+          </p>
+        </BlurFade>
+        <Marquee reverse pauseOnHover className="[--duration:20s]">
+          {certificates.map((certificate) => {
+            return (
+              <Dialog key={certificate.id}>
+                <DialogTrigger asChild>
+                  <div className="cursor-pointer">
+                    <CertificateCard
+                      imageSource={certificate.content.imageSource}
+                      title={certificate.content.name}
+                      issuer={certificate.issuer}
+                    />
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl p-4 [&>button]:hidden">
+                  <img
+                    src={certificate.content.imageSource}
+                    alt={certificate.content.name}
+                    className="h-full w-full object-contain"
+                  />
+                </DialogContent>
+              </Dialog>
+            );
+          })}
+        </Marquee>
       </section>
       <section id="contact" className="pb-12">
         <div className="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
